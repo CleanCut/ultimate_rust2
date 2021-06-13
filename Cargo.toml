@@ -1,9 +1,10 @@
 [workspace]
 members = [
-    "examples/cafeteria",
-    "examples/hello",
-    "examples/kitchen",
-    "examples/puzzle_game",
-    "examples/puzzles",
-    "exercises/idiomatic"
+    "example/cafeteria",
+    "example/hello",
+    "example/kitchen",
+    "example/puzzle_game",
+    "example/puzzles",
+    "exercise/idiomatic",
+    "exercise/docs"
 ]
