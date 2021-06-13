@@ -38,7 +38,7 @@ For your convenience, here is a list of all the exercises, with links to view th
 
 ## Examples
 
-This course goes over a lot of code in lecture format. Much of the code from the lectures can be found in the [`examples/`] directory in this repository.
+This course goes over a lot of code in lecture format. Much of the code from the lectures can be found in the [`example/`] directory in this repository.
 
 ## Contribution
 
@@ -55,7 +55,7 @@ See [license/APACHE](license/APACHE) and [license/MIT](license/MIT).
 If you like Rusty Engine, please consider sponsoring me [on GitHub] or [on Patreon]. 💖
 
 [exercises]: https://github.com/CleanCut/ultimate_rust2#exercises
-[`examples/`]: https://github.com/CleanCut/ultimate_rust2/blob/main/examples
+[`example/`]: https://github.com/CleanCut/ultimate_rust2/blob/main/example
 [open an discussion]: https://github.com/CleanCut/ultimate_rust2/discussions/new
 [Ultimate Rust Crash Course]: https://agileperception.com/ultimate_rust_crash_course
 [Rust in 3 Weeks]: https://agileperception.com
