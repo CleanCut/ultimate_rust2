@@ -5,4 +5,5 @@ members = [
     "examples/kitchen",
     "examples/puzzle_game",
     "examples/puzzles",
+    "exercises/idiomatic"
 ]
