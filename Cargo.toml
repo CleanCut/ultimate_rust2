@@ -1,0 +1,8 @@
+[workspace]
+members = [
+    "examples/cafeteria",
+    "examples/hello",
+    "examples/kitchen",
+    "examples/puzzle_game",
+    "examples/puzzles",
+]
