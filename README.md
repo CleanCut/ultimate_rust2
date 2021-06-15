@@ -28,13 +28,12 @@ For your convenience, here is a list of all the exercises, with links to view th
 
 - [Exercise 1 - Idiomatic Rust](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/idiomatic)
 - [Exercise 2 - Documentation](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/docs)
-- [Exercise 3 - Publishing to Crates.io](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/publish)
-- [Exercise 4 - Closures & Iterators](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/closures_iterators)
-- [Exercise 5 - Common Traits](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/traits)
-- [Exercise 6 - Errors](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/errors)
-- [Exercise 7 - Testing](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/testing)
-- [Exercise 8 - Logging](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/logging)
-- [Exercise 9 - Threads & Channels](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/threads_channels)
+- [Exercise 3 - Closures & Iterators](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/closures_iterators)
+- [Exercise 4 - Common Traits](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/traits)
+- [Exercise 5 - Errors](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/errors)
+- [Exercise 6 - Testing](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/testing)
+- [Exercise 7 - Logging](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/logging)
+- [Exercise 8 - Threads & Channels](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/threads_channels)
 
 ## Examples
 
