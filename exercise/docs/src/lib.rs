@@ -31,5 +31,14 @@ impl Pumpkin {
 
 pub const BURNT_ORANGE: i32 = 13;
 
-// Challenge: Move the Pumpkin struct's documentation *inside* of the struct definition.  Can you
-// see why that might not be the ideal approach?
+// Challenge: Find the option to pass to `cargo doc` so that documentation for this private item
+// gets generated as well.  Hint: `cargo doc -h`
+
+/// For internal use only. In fact, this documentation is so private that it won't be generated.
+/// At least not by default.
+enum PrivateEnum {
+    /// For Halloween. To be lit by candlelight.
+    JackOLantern,
+    /// For dessert during North American winter holidays.
+    PumpkinPie,
+}
