@@ -7,5 +7,6 @@ members = [
     "example/puzzles",
     "exercise/idiomatic",
     "exercise/docs",
-    "exercise/closures_iterators"
+    "exercise/closures_iterators",
+    "exercise/traits"
 ]
