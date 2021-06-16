@@ -14,7 +14,7 @@ edition = "2018"
 # criterion = { version = "0.3", features = ["html_reports"] }
 
 # Challenge Help 2: Each benchmark needs a `[[bench]]` section with a name and disabling the harness.
-# The name will correspond with a file benches/somename.rs
+# A name "somename" will correspond with a file "benches/somename.rs"
 
 # [[bench]]
 # name = "somename"

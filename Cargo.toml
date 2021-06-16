@@ -11,4 +11,5 @@ members = [
     "exercise/traits",
     "exercise/errors",
     "exercise/testing",
+    "exercise/threads_channels",
 ]
