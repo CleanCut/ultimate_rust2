@@ -26,7 +26,7 @@ fn main() {
 
     // let mut numbers = vec![1, 2, 3, 4];
     // for x in ... {
-    //     ... // square the value via the mutable reference x
+    //     ... // multiply the value by 3 via the mutable reference x
     // }
     // println!("{:?}", numbers); // should print [3, 6, 9, 12]
 
