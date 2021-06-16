@@ -1,0 +1,25 @@
+[package]
+name = "testing"
+version = "0.1.0"
+authors = ["Nathan Stocks <nathan@agileperception.com>"]
+edition = "2018"
+
+[dependencies]
+
+
+# Challenge Help 1: If you choose to take on the challenge, you'll need to add `criterion` as a
+# development dependency. Here is one way to do it:
+
+# [dev-dependencies]
+# criterion = { version = "0.3", features = ["html_reports"] }
+
+# Challenge Help 2: Each benchmark needs a `[[bench]]` section with a name and disabling the harness.
+# The name will correspond with a file benches/somename.rs
+
+# [[bench]]
+# name = "somename"
+# harness = false
+
+# Challenge Help 3: The Criterion documentation has a great tutorial for how to actually write your
+# benchmark.  Don't skip the part about `black_box()`!
+# https://bheisler.github.io/criterion.rs/book/getting_started.html#step-2---add-benchmark

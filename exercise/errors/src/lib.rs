@@ -3,7 +3,7 @@
 // - TooYoung - An dolphin is too young
 // - LongName - The dolphin's name is too long and annoying to say
 //
-// As a reminder, here are the 5 Guidelines for creating an error type
+// As a reminder, here are the 5 Guidelines for creating an error type:
 // (1) Use an `enum` for your error type
 // (2) Your error conditions should be enum variants grouped in as few enums as makes sense
 // (3) Don't expose error types other than your own (you don't have to do anything for this one)

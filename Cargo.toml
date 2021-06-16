@@ -10,4 +10,5 @@ members = [
     "exercise/closures_iterators",
     "exercise/traits",
     "exercise/errors",
+    "exercise/testing",
 ]
