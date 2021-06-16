@@ -8,5 +8,6 @@ members = [
     "exercise/idiomatic",
     "exercise/docs",
     "exercise/closures_iterators",
-    "exercise/traits"
+    "exercise/traits",
+    "exercise/errors",
 ]
