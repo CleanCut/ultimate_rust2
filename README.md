@@ -30,7 +30,7 @@ For your convenience, here is a list of all the exercises, with links to view th
 - [Exercise 2 - Documentation](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/docs)
 - [Exercise 3 - Closures & Iterators](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/closures_iterators)
 - [Exercise 4 - Common Traits](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/traits)
-- [Exercise 5 - Errors](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/errors)
+- [Exercise 5 - Errors](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/errors) - See also Jane Lusby's 2020 RustConf Session, [Error Handling Isn't All About Errors]
 - [Exercise 6 - Testing](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/testing)
 - [Exercise 7 - Logging](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/logging)
 - [Exercise 8 - Threads & Channels](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/threads_channels)
@@ -62,3 +62,4 @@ If you like Rusty Engine, please consider sponsoring me [on GitHub] or [on Patre
 [the repository for the previous course]: https://github.com/CleanCut/ultimate_rust_crash_course
 [on GitHub]: https://github.com/sponsors/CleanCut
 [on Patreon]: https://patreon.com/nathanstocks
+[Error Handling Isn't All About Errors]: https://www.youtube.com/watch?v=rAF8mLI0naQ
