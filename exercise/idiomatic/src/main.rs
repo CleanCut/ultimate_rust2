@@ -1,7 +1,7 @@
-// 1. Wow. Just...wow.  Let's start cleaning this up by running `cargo fmt`.
+// 1. This code looks terrible. Let's start cleaning this up by running `cargo fmt`.
 
 // 2. `cargo fmt` is great, but it doesn't add blank lines where there are none. Go ahead and add
-//    some blank lines in places you think it would make sense.
+// some blank lines in places you think it would make sense.
 
 // 3. Time to clean up! Run `cargo clippy`. Fix up all the warnings so `cargo clippy` is silent.
 
