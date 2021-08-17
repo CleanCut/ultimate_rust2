@@ -12,15 +12,16 @@
 // - The description on the index page should be "Big orange thing"
 // - Make a section header called "Recipes"
 // - Explain that recipes will be coming soon.
-// - Explain that "roundness" is a percentage
-// - Explain that "orangeness" is a number from 8 to 27
+// - Document the "roundness" field, explaining that it is a percentage
+// - Document the "orangeness" field, explaining that it is a number from 8 to 27
 
 pub struct Pumpkin {
     pub roundness: f32,
     pub orangeness: i32,
 }
 
-// 4. Explain that if you smash the pumpkin, it will be gone. Then it can't be used for pie. :'-(
+// 4. Document the "smash" method. Explain that if you smash the pumpkin, it will be gone. Then it
+// can't be used for pie. :'-(
 
 impl Pumpkin {
     pub fn smash(self) {}
@@ -32,10 +33,11 @@ impl Pumpkin {
 pub const BURNT_ORANGE: i32 = 13;
 
 // Challenge: Find the option to pass to `cargo doc` so that documentation for this private item
-// gets generated as well.  Hint: `cargo doc -h`
+// gets generated as well.  Hint: `cargo doc -h` will show you all the relevant options.
 
 /// For internal use only. In fact, this documentation is so private that it won't be generated.
-/// At least not by default.
+/// At least not by default. But if you pass the correct option in, it will magically appear!
+#[allow(dead_code)] // to silence the warning
 enum PrivateEnum {
     /// For Halloween. To be lit by candlelight.
     JackOLantern,
