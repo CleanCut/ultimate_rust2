@@ -12,16 +12,16 @@ pub struct Party {
 
 fn main() {
     // 1. The code below doesn't work because Cake doesn't implement Debug.
-    // - Derive the Debug trait for the Cake enum above so this code will work.
+    // - Derive the Debug trait for the Cake enum above so this code will work. Then, run the code.
 
     let cake = Cake::Spice;
     admire_cake(cake);
 
-    // 2. Uncomment the code below. It doesn't work since `cake` was moved into the admire_cake()
-    // function.
-    // - Derive the Copy trait for the Cake enum so that `cake` gets copied into the
-    //   admire_cake() function instead of moved.
-    // - Hint: You may need to implement an additional trait in order to be able to implement Copy.
+    // 2. Uncomment the code below. It doesn't work since `cake` was *moved* into the admire_cake()
+    // function. Let's fix the Cake enum so the code below works without any changes.
+    // - Derive the Copy trait for the Cake enum so that `cake` gets copied into the admire_cake()
+    // function instead of moved.
+    // - Hint: You may need to derive another trait in order to be able to derive the Copy trait
 
     // match cake {
     //     Cake::Chocolate => println!("The name's Chocolate. Dark...Chocolate."),
@@ -29,10 +29,11 @@ fn main() {
     //     Cake::Spice => println!("Great, let's spice it up!"),
     // }
 
-    // 3. Uncomment the println below
-    // - Derive Debug for the Party struct above
-    // - Manually implement the Default trait for the Party struct above. The default value you
-    //   should return from your trait implementation should be:
+    // 3. Uncomment the println below. It doesn't work since the Party struct doesn't implement the
+    // Debug or Default traits.
+    // - Derive the Debug trait for the Party struct
+    // - Manually implement the Default trait for the Party struct. Use the value below as the
+    // default value that you return from the `default` method:
     //
     //     Party {
     //         at_restaurant: true,
@@ -48,8 +49,8 @@ fn main() {
     // 4. You prefer Maple Bacon cake. Use "struct update syntax" to create a Dessert with `cake`
     // set to `Cake::MapleBacon`, but the rest of the values are default.
     //
-    // Hint: The trick to struct update syntax is specifying the value(s) you want to customize and
-    // then ending the struct with `..Default::default()` -- but no comma after that!
+    // Hint: The trick to struct update syntax is specifying the value(s) you want to customize
+    // first and then ending the struct with `..Default::default()` -- but no comma after that!
 
     // let party = Party {
     //     ...
@@ -59,7 +60,7 @@ fn main() {
     // 5. Parties are "equal" if they have the same cake.
     // - Derive the PartialEq trait for the Cake enum so Cakes can be compared.
     // - Manually implement the PartialEq trait for Party. If different parties have the same cake,
-    // then they are equal.
+    // then they are equal, no matter the location or number of attendees at the party.
     // - Uncomment and run the code below.
 
     // let other_party = Party {
@@ -73,10 +74,18 @@ fn main() {
 
     // Challenge: You would like to be able to pass a Party struct into the smell_cake() function
     // which takes a type T which implements the Into<Cake> trait.
-    // - Uncomment the code below AND the smell_cake() function at the bottom of this file
-    // - Implement From<Party> for Cake so that the code below will work.
+    // - Uncomment the code below AND uncomment the smell_cake() function at the bottom of this file
+    // - Implement `From<Party> for Cake` so that the function call below works.
+    //
 
     // smell_cake(party);
+
+    // Challenge 2: Implement `From<&Party> for Cake` so that you can smell your cake without
+    // consuming it. Change the code above to pass in a &party. Then uncomment and run the code
+    // below. After all, you want to smell your cake and eat it, too!
+
+    // println!("Yum! I'm eating this cake: {:?}. Oops, I dropped it on the floor.", party.cake);
+    // drop(cake);
 }
 
 pub fn admire_cake(cake: Cake) {
