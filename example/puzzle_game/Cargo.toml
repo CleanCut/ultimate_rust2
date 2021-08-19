@@ -8,4 +8,4 @@ edition = "2018"
 anyhow = "1.0"
 puzzles = { path = "../puzzles" }
 log = "0.4"
-env_logger = "0.8"
+env_logger = "0.9"

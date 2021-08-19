@@ -1,9 +1,10 @@
-// 1. Bring the macros error, warn, info, debug, and trace into scope from the log package with a
+// 1. Bring the macros `error, warn, info, debug, trace` into scope from the log package with a
 // `use` statement.
 //
-// - You should be able to run `cargo build --lib` successfully after each step.
+// You should be able to run `cargo build --lib` successfully after this step (and each step in this
+// file)
 //
-// Hint: You may need to update Cargo.toml first
+// Hint: You need to update Cargo.toml to add the `log` dependency, first.
 
 #[derive(Debug)]
 pub struct Frog {
@@ -17,14 +18,13 @@ impl Frog {
         Default::default()
     }
     pub fn hop(&mut self) {
-        // 3. Use info!() to log that a Frog hopped, and how much energy is left
         self.energy -= 1;
+        // 3. Use info!() to log that a Frog hopped, and how much energy is left
         if self.energy == 0 {
             // 4. Use warn!() to warn that the frog will go to sleep since he ran out of energy
             self.sleep();
         }
     }
-    // info, error
     pub fn sleep(&mut self) {
         if !self.sleeping {
             // 5. Use error!() to log a (non-fatal) error stating that the Frog is already asleep
