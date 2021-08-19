@@ -15,26 +15,28 @@ pub fn splish(a: i32, b: i32) -> i32 {
 
 mod test {
     // 2. Bring all the library items into scope with a `use` statement
+    // Hint: It's okay to use `*` here.
 
-    // 3. Write a test function that verifies the following condition using assert_eq! or assert_ne!
+    // 3. Write a test function that verifies the following condition using the `assert_eq!` or
+    // `assert_ne!` macros
     // - sploosh(1, 2, 3) returns 4
     // - sploosh(5, 6, 7) does not return 4
     // - If you pass sploosh a negative number for the first argument, 99 is returned
     //
-    // `cargo test` should run your tests AND pass
-    // Hint: Don't forget the `test` attribute for your test function!
+    // `cargo test` should run your tests and pass
+    // Hint: Don't forget the `#[test]` attribute for your test function!
 
-    // 4. Write a test function that verifies the following conditions using assert!
+    // 4. Write a test function that verifies the following conditions using the `assert!` macro
     // - splish(100, 10) is negative
     // - splish(40, 20) is positive
     // - splish(9, 3) is 0
 }
 
-// 4. Create a tests/ directory and an integration test file tests/more_tests.rs
+// 4. Create a `tests/` directory and an integration test file `tests/more_tests.rs`
 // Inside that file, create a test function that verifies:
-// - sploosh(splish(-1, 0), splish(1, 1), splish(3, 2)) returns 4
+// - that `sploosh(splish(-1, 0), splish(1, 1), splish(3, 2))` returns the value `4`
 //
-// `cargo test` should run your more_tests.rs file and pass
+// `cargo test` should run your `more_tests.rs` file and pass
 
 // Challenge: Create a benchmark that measures the speed of splish(8, 9, 10)
 // - Speed up the implementation of splish(8, 9, 10) without breaking the other tests.
