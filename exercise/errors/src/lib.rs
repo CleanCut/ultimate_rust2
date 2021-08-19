@@ -1,18 +1,18 @@
 // 1. Create a DolphinError type representing the following three conditions:
-// - Hungry - An dolphin is hungry
-// - TooYoung - An dolphin is too young
+// - Hungry - The dolphin is hungry
+// - TooYoung - The dolphin is too young
 // - LongName - The dolphin's name is too long and annoying to say
 //
 // As a reminder, here are the 5 Guidelines for creating an error type:
 // (1) Use an `enum` for your error type
 // (2) Your error conditions should be enum variants grouped in as few enums as makes sense
-// (3) Don't expose error types other than your own (you don't have to do anything for this one)
+// (3) Don't expose error types other than your own (not going to be a problem for this exercise)
 // (4) Make your enum non-exhaustive
 // (5) Implement the Debug, Display, and Error traits
-// (5b) You can use thiserror's `Error` macro to derive Display and Error.h
+// (5b) You can use thiserror's `Error` macro to derive the Display and Error traits
 //
-// Once you have completed the error type correctly, you should be able to run `cargo build --lib`
-// without any errors.
+// Once you have completed defining the error type correctly, you should be able to run
+// `cargo build --lib` without any build errors or warnings. Then go to main.rs and continue with #2
 
 // pub enum DolphinError...
 
