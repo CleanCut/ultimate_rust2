@@ -20,43 +20,45 @@ fn main() {
 
     // 1. Spawn a child thread and have it call `expensive_sum(my_vector)`.  Store the returned
     // join handle in a variable called `handle`. Once you've done this you should be able to run
-    // the code and see the Child thread output in the middle of the main thread's letters
+    // the code and see the output from the child thread's expensive sum in the middle of the main
+    // thread's processing of letters.
     //
     //let handle = ...
-    let handle = thread::spawn(|| expensive_sum(my_vector));
 
     // While the child thread is running, the main thread will also do some work
     for letter in vec!["a", "b", "c", "d", "e", "f"] {
-        println!("Main thread: Letter {}", letter);
+        println!("Main thread: Processing the letter '{}'", letter);
         sleep_ms(200);
     }
 
     // 2. Let's retrieve the value returned by the child thread once it has exited.
-    // - Uncomment the code below.
-    // - Using the `handle` variable you stored the join handle in earlier, call .join() to wait for
-    //   the thread to exit with a `Result<i32, Err>`.
-    // - Get the i32 out of the Result and store it in a `sum` variable.
+    // - Uncomment and complete the code below.
+    // - Call the .join() method on `handle` from #1 and assign the `Result<i32, Err>` it returns
+    // to a variable named `result`
+    // - Get the i32 out of `result` and store it in a `sum` variable.
 
     // let result =
     // let sum =
     // println!("The child thread's expensive sum is {}", sum);
 
     // 3. Time for some fun with channels!
-    // - Uncomment the block comment below (Find and remove the `/*` and `*/`).
+    // - Uncomment the block comment below (Find and remove the `/*` and `*/`). 
     // - Create variables `tx` and `rx` and assign them to the sending and receiving ends of an
-    //   unbounded channel.
+    //   unbounded channel. Hint: An unbounded channel can be created with `channel::unbounded()`
 
-    /*
-    let (tx, rx) = channel::unbounded();
+/*
+    // let ...
+
     // Cloning a channel makes another variable connected to that end of the channel so that you can
-    // send it to another thread.
+    // send it to another thread. We want another variable that can be used for sending...
     let tx2 = tx.clone();
 
     // 4. Examine the flow of execution of "Thread A" and "Thread B" below. Do you see how their
     // output will mix with each other?
-    // - Alter the values passed to the `pause_ms()` calls in "Thread A" so that both the "Thread B"
-    //   outputs occur before the "Thread A" outputs.
+    // - Increase the value passed to the first `pause_ms()` call in "Thread A" so that both the
+    // "Thread B" outputs occur before the "Thread A" outputs.
 
+    // Thread A
     let handle_a = thread::spawn(move || {
         pause_ms(0);
         tx2.send("Thread A: 1").unwrap();
@@ -66,6 +68,7 @@ fn main() {
 
     pause_ms(100); // Make sure Thread A has time to get going before we spawn Thread B
 
+    // Thread B
     let handle_b = thread::spawn(move || {
         pause_ms(0);
         tx.send("Thread B: 1").unwrap();
@@ -83,7 +86,7 @@ fn main() {
 
     // 5. Oops, we forgot to join "Thread A" and "Thread B". That's bad hygiene!
     // - Use the thread handles to join both threads without getting any compiler warnings.
-    */
+*/
 
     // Challenge: Make two child threads and give them each a receiving end to a channel.  From the
     // main thread loop through several values and print each out and then send it to the channel.
