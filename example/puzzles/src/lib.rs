@@ -147,7 +147,7 @@ pub enum PuzzleType {
 //     }
 // }
 
-// #[derive(Debug)] // #5: Debug + Display + Exception
+// #[derive(Debug)] // #5: Debug + Display + Error
 // #[non_exhaustive] // #4: Non-Exhaustive
 // pub enum PuzzleError {
 //     // #1: enum
@@ -155,6 +155,7 @@ pub enum PuzzleType {
 //     MissingPiece, // #3: Only YOUR Errors
 // }
 
+// #5: Debug + Display + Error
 #[derive(Debug, Error)]
 #[non_exhaustive]
 pub enum PuzzleError {
@@ -164,8 +165,8 @@ pub enum PuzzleError {
     MissingPiece,
 }
 
+// #5: Debug + Display + Error
 // impl Display for PuzzleError {
-//     // #5: Debug + Display + Exception
 //     fn fmt(&self, f: &mut Formatter) -> std::fmt::Result {
 //         use PuzzleError::*;
 //         match self {
@@ -175,9 +176,5 @@ pub enum PuzzleError {
 //     }
 // }
 
-// impl Error for PuzzleError {
-//     // #5: Debug + Display + Exception
-//     fn source(&self) -> Option<&(dyn Error + 'static)> {
-//         None
-//     }
-// }
+// #5: Debug + Display + Error
+// impl Error for PuzzleError {}
