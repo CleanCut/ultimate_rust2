@@ -1,8 +1,7 @@
 [package]
 name = "puzzle_game"
 version = "0.1.0"
-authors = ["Nathan Stocks <nathan@agileperception.com>"]
-edition = "2018"
+edition = "2021"
 
 [dependencies]
 anyhow = "1.0"
