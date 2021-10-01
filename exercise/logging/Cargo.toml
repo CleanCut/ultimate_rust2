@@ -1,8 +1,7 @@
 [package]
 name = "frogger"
 version = "0.1.0"
-authors = ["Nathan Stocks <nathan@agileperception.com>"]
-edition = "2018"
+edition = "2021"
 
 [dependencies]
 # I'm glad you came to add the `log` dependency! I got it all ready for you, just uncomment:
