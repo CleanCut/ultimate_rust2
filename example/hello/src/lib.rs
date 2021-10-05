@@ -9,6 +9,22 @@ pub fn snuggle(bunnies: u128) -> u128 {
     bunnies << 3
 }
 
+// The typical, multiplication approach
+//
+// pub fn snuggle(bunnies: u128) -> u128 {
+//     bunnies * 8
+// }
+
+// The loop approach
+//
+// pub fn snuggle(bunnies: u128) -> u128 {
+//     let mut result = 0;
+//     for _ in 0..8 {
+//         result += bunnies
+//     }
+//     result
+// }
+
 #[cfg(test)]
 mod test {
     use std::num::ParseIntError;
