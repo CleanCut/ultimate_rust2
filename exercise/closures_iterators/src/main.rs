@@ -31,11 +31,6 @@ fn main() {
     // }
     // println!("{:?}", numbers); // should print [3, 6, 9, 12]
 
-    let mut numbers = vec![1, 2, 3, 4];
-    numbers.iter_mut().for_each(|x| *x *= 3);
-    println!("{:?}", numbers); // should print [3, 6, 9, 12]
-
-
     // 4. Uncomment the code below.  Take the vector of words and
     // - Convert the vector into an iterator with .into_iter()
     // - Use .filter() to remove any word that contains the letter "h" -- use .contains()
