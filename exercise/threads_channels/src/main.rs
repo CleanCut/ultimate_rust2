@@ -42,51 +42,53 @@ fn main() {
     // println!("The child thread's expensive sum is {}", sum);
 
     // 3. Time for some fun with channels!
-    // - Uncomment the block comment below (Find and remove the `/*` and `*/`). 
+    // - Uncomment the block comment below (Find and remove the `/*` and `*/`).
     // - Create variables `tx` and `rx` and assign them to the sending and receiving ends of an
-    //   unbounded channel. Hint: An unbounded channel can be created with `channel::unbounded()`
+    // unbounded channel. Hint: An unbounded channel can be created with `channel::unbounded()`
 
-/*
-    // let ...
+    /*
+        // let ...
 
-    // Cloning a channel makes another variable connected to that end of the channel so that you can
-    // send it to another thread. We want another variable that can be used for sending...
-    let tx2 = tx.clone();
+        // Cloning a channel makes another variable connected to that end of the channel so that you can
+        // send it to another thread. We want another variable that can be used for sending...
+        let tx2 = tx.clone();
 
-    // 4. Examine the flow of execution of "Thread A" and "Thread B" below. Do you see how their
-    // output will mix with each other?
-    // - Increase the value passed to the first `pause_ms()` call in "Thread A" so that both the
-    // "Thread B" outputs occur before the "Thread A" outputs.
+        // 4. Examine the flow of execution of "Thread A" and "Thread B" below. Do you see how their
+        // output will mix with each other?
+        // - Run this code. Notice the order of output from Thread A and Thread B.
+        // - Increase the value passed to the first `sleep_ms()` call in Thread A so that both the
+        // Thread B outputs occur *before* Thread A outputs anything.
+        // - Run the code again and make sure the output comes in a different order.
 
-    // Thread A
-    let handle_a = thread::spawn(move || {
-        pause_ms(0);
-        tx2.send("Thread A: 1").unwrap();
-        pause_ms(200);
-        tx2.send("Thread A: 2").unwrap();
-    });
+        // Thread A
+        let handle_a = thread::spawn(move || {
+            sleep_ms(0);
+            tx2.send("Thread A: 1").unwrap();
+            sleep_ms(200);
+            tx2.send("Thread A: 2").unwrap();
+        });
 
-    pause_ms(100); // Make sure Thread A has time to get going before we spawn Thread B
+        sleep_ms(100); // Make sure Thread A has time to get going before we spawn Thread B
 
-    // Thread B
-    let handle_b = thread::spawn(move || {
-        pause_ms(0);
-        tx.send("Thread B: 1").unwrap();
-        pause_ms(200);
-        tx.send("Thread B: 2").unwrap();
-    });
+        // Thread B
+        let handle_b = thread::spawn(move || {
+            sleep_ms(0);
+            tx.send("Thread B: 1").unwrap();
+            sleep_ms(200);
+            tx.send("Thread B: 2").unwrap();
+        });
 
-    // Using a Receiver channel as an iterator is a convenient way to get values until the channel
-    // gets closed.  A Receiver channel is automatically closed once all Sender channels have been
-    // closed.  Both our threads automatically close their Sender channels when they exit and the
-    // destructors for the channels get automatically called.
-    for msg in rx {
-        println!("Main thread: Received {}", msg);
-    }
+        // Using a Receiver channel as an iterator is a convenient way to get values until the channel
+        // gets closed.  A Receiver channel is automatically closed once all Sender channels have been
+        // closed.  Both our threads automatically close their Sender channels when they exit and the
+        // destructors for the channels get automatically called.
+        for msg in rx {
+            println!("Main thread: Received {}", msg);
+        }
 
-    // 5. Oops, we forgot to join "Thread A" and "Thread B". That's bad hygiene!
-    // - Use the thread handles to join both threads without getting any compiler warnings.
-*/
+        // 5. Oops, we forgot to join "Thread A" and "Thread B". That's bad hygiene!
+        // - Use the thread handles to join both threads without getting any compiler warnings.
+    */
 
     // Challenge: Make two child threads and give them each a receiving end to a channel.  From the
     // main thread loop through several values and print each out and then send it to the channel.
