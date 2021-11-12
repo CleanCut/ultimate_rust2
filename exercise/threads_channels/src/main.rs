@@ -1,6 +1,7 @@
 // Silence some warnings so they don't distract from the exercise.
 #![allow(dead_code, unused_imports, unused_variables)]
 use crossbeam::channel;
+use std::sync::mpsc::channel;
 use std::thread;
 use std::time::Duration;
 
@@ -23,7 +24,7 @@ fn main() {
     // the code and see the output from the child thread's expensive sum in the middle of the main
     // thread's processing of letters.
     //
-    //let handle = ...
+    let handle = thread::spawn(move || expensive_sum(my_vector));
 
     // While the child thread is running, the main thread will also do some work
     for letter in vec!["a", "b", "c", "d", "e", "f"] {
@@ -37,17 +38,16 @@ fn main() {
     // to a variable named `result`
     // - Get the i32 out of `result` and store it in a `sum` variable.
 
-    // let result =
-    // let sum =
-    // println!("The child thread's expensive sum is {}", sum);
+    let result = handle.join();
+    let sum = result.expect("the child thread had an error, crashing now, sorry.");
+    println!("The child thread's expensive sum is {}", sum);
 
     // 3. Time for some fun with channels!
-    // - Uncomment the block comment below (Find and remove the `/*` and `*/`). 
+    // - Uncomment the block comment below (Find and remove the `/*` and `*/`).
     // - Create variables `tx` and `rx` and assign them to the sending and receiving ends of an
     //   unbounded channel. Hint: An unbounded channel can be created with `channel::unbounded()`
 
-/*
-    // let ...
+    let (tx, rx) = channel::unbounded();
 
     // Cloning a channel makes another variable connected to that end of the channel so that you can
     // send it to another thread. We want another variable that can be used for sending...
@@ -55,24 +55,24 @@ fn main() {
 
     // 4. Examine the flow of execution of "Thread A" and "Thread B" below. Do you see how their
     // output will mix with each other?
-    // - Increase the value passed to the first `pause_ms()` call in "Thread A" so that both the
+    // - Increase the value passed to the first `sleep_ms()` call in "Thread A" so that both the
     // "Thread B" outputs occur before the "Thread A" outputs.
 
     // Thread A
     let handle_a = thread::spawn(move || {
-        pause_ms(0);
+        sleep_ms(400);
         tx2.send("Thread A: 1").unwrap();
-        pause_ms(200);
+        sleep_ms(200);
         tx2.send("Thread A: 2").unwrap();
     });
 
-    pause_ms(100); // Make sure Thread A has time to get going before we spawn Thread B
+    sleep_ms(100); // Make sure Thread A has time to get going before we spawn Thread B
 
     // Thread B
     let handle_b = thread::spawn(move || {
-        pause_ms(0);
+        sleep_ms(0);
         tx.send("Thread B: 1").unwrap();
-        pause_ms(200);
+        sleep_ms(200);
         tx.send("Thread B: 2").unwrap();
     });
 
@@ -86,7 +86,9 @@ fn main() {
 
     // 5. Oops, we forgot to join "Thread A" and "Thread B". That's bad hygiene!
     // - Use the thread handles to join both threads without getting any compiler warnings.
-*/
+
+    let _ = handle_a.join(); // one way to deal with a result is to explicitly ignore it
+    handle_b.join().unwrap(); // or we could choose to crash if there is an error
 
     // Challenge: Make two child threads and give them each a receiving end to a channel.  From the
     // main thread loop through several values and print each out and then send it to the channel.
