@@ -26,14 +26,14 @@ If you encounter any problems with the exercises, please feel free to use the on
 
 For your convenience, here is a list of all the exercises, with links to view the code on GitHub.
 
-- [Exercise 1 - Idiomatic Rust](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/idiomatic)
-- [Exercise 2 - Documentation](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/docs)
-- [Exercise 3 - Closures & Iterators](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/closures_iterators)
-- [Exercise 4 - Common Traits](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/traits)
-- [Exercise 5 - Errors](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/errors) - See also Jane Lusby's 2020 RustConf Session, [Error Handling Isn't All About Errors]
-- [Exercise 6 - Testing](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/testing)
-- [Exercise 7 - Logging](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/logging)
-- [Exercise 8 - Threads & Channels](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/threads_channels)
+- [Exercise - Idiomatic Rust](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/idiomatic)
+- [Exercise - Documentation](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/docs)
+- [Exercise - Closures & Iterators](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/closures_iterators)
+- [Exercise - Common Traits](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/traits)
+- [Exercise - Errors](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/errors) - See also Jane Lusby's 2020 RustConf Session, [Error Handling Isn't All About Errors]
+- [Exercise - Testing](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/testing)
+- [Exercise - Logging](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/logging)
+- [Exercise - Threads & Channels](https://github.com/CleanCut/ultimate_rust2/tree/main/exercise/threads_channels)
 
 ## Examples
 
@@ -51,7 +51,7 @@ See [license/APACHE](license/APACHE) and [license/MIT](license/MIT).
 
 ## Sponsor
 
-If you like Rusty Engine, please consider sponsoring me [on GitHub] or [on Patreon]. 💖
+If you like the work I do, please consider sponsoring me [on GitHub] or [on Patreon]. 💖
 
 [exercises]: https://github.com/CleanCut/ultimate_rust2#exercises
 [`example/`]: https://github.com/CleanCut/ultimate_rust2/blob/main/example
