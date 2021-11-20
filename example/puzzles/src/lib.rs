@@ -29,6 +29,7 @@ impl Puzzle {
     }
     /// Load a puzzle from a file
     pub fn from_file(_fh: File) -> Result<Self, PuzzleError> {
+        println!("HERE");
         error!("This file is missing a piece!");
         Err(PuzzleError::MissingPiece)
     }

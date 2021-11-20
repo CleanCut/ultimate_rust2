@@ -12,7 +12,10 @@ fn get_puzzle(filename: &str) -> Result<Puzzle> {
 
 fn main() -> Result<()> {
     env_logger::init();
-    let puzzle = match get_puzzle("puzzle.dat").context("Couldn't get the first puzzle") {
+    // This gets the absolute path to the puzzle.dat file in examples/puzzle_game no matter what
+    // directory you are in when you run the `cargo run` command.
+    let puzzle_file_path = &format!("{}/{}", env!("CARGO_MANIFEST_DIR"), "puzzle.dat");
+    let puzzle = match get_puzzle(puzzle_file_path).context("Couldn't get the first puzzle") {
         Ok(p) => p,
         Err(_) => Puzzle::new(),
     };
