@@ -6,8 +6,8 @@ edition = "2021"
 [dependencies]
 # I'm glad you came to add the `log` dependency! I got it all ready for you, just uncomment:
 #
-# log = "0.4"
+log = "0.4"
 
 # And here's the env_logger dependency that you'll need in main.rs
 #
-# env_logger = "0.9"
+env_logger = "0.9"
