@@ -49,8 +49,12 @@ fn main() {
     ];
     for dolphin in &dolphins {
         // Challenge: Change main() so that it returns a Result, and instead of handling the error
-        // that play_time returns, use the try operator to only handle the success condition. How
-        // does the output of the program change?
+        // that play_time returns, use the try (?) operator to only handle the success condition.
+        // 
+        // If done correctly, the output of the program will become much shorter. Since play_time
+        // returns an Err variant the first time it is called, the try operator will return it from
+        // main(), which will end the program at the first error. anyhow's Result will take care of
+        // formatting the error output for us.
         match play_time(dolphin) {
             Ok(responses) => {
                 println!("{} did a FABULOUS PERFORMANCE!", dolphin.name);
