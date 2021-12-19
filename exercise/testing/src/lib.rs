@@ -38,6 +38,6 @@ mod test {
 //
 // `cargo test` should run your `more_tests.rs` file and pass
 
-// Challenge: Create a benchmark that measures the speed of splish(8, 9, 10)
-// - Speed up the implementation of splish(8, 9, 10) without breaking the other tests.
+// Challenge: Create a benchmark that measures the speed of sploosh(8, 9, 10)
+// - Speed up the implementation of sploosh(8, 9, 10) without breaking the other tests.
 // - Hint: See Cargo.toml to get you started
