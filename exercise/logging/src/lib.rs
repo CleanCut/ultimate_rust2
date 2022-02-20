@@ -26,8 +26,9 @@ impl Frog {
         }
     }
     pub fn sleep(&mut self) {
-        if !self.sleeping {
+        if self.sleeping {
             // 5. Use error!() to log a (non-fatal) error stating that the Frog is already asleep
+        } else {
             self.sleeping = true;
         }
     }

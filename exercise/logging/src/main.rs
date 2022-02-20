@@ -19,6 +19,7 @@ fn main() {
     skippy.hop();
     skippy.hop();
     skippy.sleep();
+    skippy.sleep();
 
     // Challenge: Go back to lib.rs and set the `target: ` argument for each logging call to be the
     // path to the function.  For example, `Frog::new`
