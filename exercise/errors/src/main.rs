@@ -1,6 +1,8 @@
 // START IN lib.rs!
 
 use aquarium::Dolphin;
+// Silence some warnings so they don't distract from the exercise.
+#[allow(clippy::vec_init_then_push)]
 
 // (You already did #1 in lib.rs, right?)
 //
