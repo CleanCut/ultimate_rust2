@@ -8,6 +8,7 @@ use aquarium::Dolphin;
 // - Bring anyhow::Result into scope with a `use` statement
 // - Have the play_time function return a `Result<Vec<String>>`. The vector of Strings will
 //   represent successful outcomes of various dolphin tricks.
+#[allow(clippy::vec_init_then_push)] 
 
 // fn play_time(dolphin: &Dolphin) -> ... {
 //     let mut responses = vec![];
