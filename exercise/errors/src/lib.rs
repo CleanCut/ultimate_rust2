@@ -14,7 +14,18 @@
 // Once you have completed defining the error type correctly, you should be able to run
 // `cargo build --lib` without any build errors or warnings. Then go to main.rs and continue with #2
 
-// pub enum DolphinError...
+use thiserror::Error;
+
+#[derive(Debug, Error)]
+#[non_exhaustive]
+pub enum DolphinError {
+    #[error("The dolphin is hungry")]
+    Hungry,
+    #[error("The dolphin is too young")]
+    TooYoung,
+    #[error("The dolphin's name is too long and annoying to say")]
+    LongName,
+}
 
 pub struct Dolphin {
     pub name: String,
