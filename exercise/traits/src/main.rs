@@ -46,7 +46,7 @@ fn main() {
 
     // println!("The default Party is\n{:#?}", Party::default());
 
-    // 4. You prefer Maple Bacon cake. Use "struct update syntax" to create a Dessert with `cake`
+    // 4. You prefer Maple Bacon cake. Use "struct update syntax" to create a Party with `cake`
     // set to `Cake::MapleBacon`, but the rest of the values are default.
     //
     // Hint: The trick to struct update syntax is specifying the value(s) you want to customize
