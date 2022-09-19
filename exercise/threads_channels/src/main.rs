@@ -79,7 +79,7 @@ fn main() {
         });
 
         // Using a Receiver channel as an iterator is a convenient way to get values until the channel
-        // gets closed.  A Receiver channel is automatically closed once all Sender channels have been
+        // gets closed. A Receiver channel is automatically closed once all Sender channels have been
         // closed.  Both our threads automatically close their Sender channels when they exit and the
         // destructors for the channels get automatically called.
         for msg in rx {
