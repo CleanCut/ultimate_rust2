@@ -18,7 +18,7 @@ fn expensive_sum(v: Vec<i32>) -> i32 {
 fn main() {
     let my_vector = vec![2, 5, 1, 0, 4, 3];
 
-    // 1. Spawn a child thread and have it call `expensive_sum(my_vector)`.  Store the returned
+    // 1. Spawn a child thread and have it call `expensive_sum(my_vector)`. Store the returned
     // join handle in a variable called `handle`. Once you've done this you should be able to run
     // the code and see the output from the child thread's expensive sum in the middle of the main
     // thread's processing of letters.
