@@ -1,2 +1,3 @@
 [workspace]
 members = [ "example/*", "exercise/*" ]
+resolver = "2"
