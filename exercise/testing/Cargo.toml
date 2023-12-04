@@ -9,15 +9,15 @@ edition = "2021"
 # Challenge Help 1: If you choose to take on the challenge, you'll need to add `criterion` as a
 # development dependency. Here is one way to do it:
 
-# [dev-dependencies]
-# criterion = { version = "0.3", features = ["html_reports"] }
+[dev-dependencies]
+criterion = { version = "0.5.1", features = ["html_reports"] }
 
 # Challenge Help 2: Each benchmark needs a `[[bench]]` section with a name and disabling the harness.
 # A name "somename" will correspond with a file "benches/somename.rs"
 
-# [[bench]]
-# name = "somename"
-# harness = false
+[[bench]]
+name = "sploosh_speed"
+harness = false
 
 # Challenge Help 3: The Criterion documentation has a great tutorial for how to actually write your
 # benchmark.  Don't skip the part about `black_box()`!

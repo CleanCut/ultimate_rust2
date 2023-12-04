@@ -7,7 +7,10 @@ use frogger::Frog;
 // 7. Update Cargo.toml to add the `env_logger` dependency
 
 fn main() {
+    std::env::set_var("RUST_LOG", "trace");
+
     // 8. Initialize env_logger using the init() function at the top level of the library
+    env_logger::init();
 
     // 9. Run this program with `cargo run` and take a look at the default output.
     // - Now run it again with an explicit log level, like `RUST_LOG=info cargo run`

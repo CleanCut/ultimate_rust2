@@ -30,6 +30,7 @@ pub mod mom {
 }
 
 fn main() {
+    std::env::set_var("RUST_LOG", "trace");
     env_logger::init();
     let handle = thread::spawn(|| dad::cook_spaghetti());
 
