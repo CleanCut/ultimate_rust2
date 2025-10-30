@@ -22,7 +22,7 @@ The exercises are separate Rust projects inside the `exercises/` subdirectory.  
 - Open up the `src/main.rs` file.
 - Follow the numbered exercise instructions in the code comments.
 
-If you encounter any problems with the exercises, please feel free to use the online course communication tools to contact me, or [open an discussion]. Either way. 😄
+If you encounter any problems with the exercises, please feel free to use the online course communication tools to contact me, or [open a discussion]. Either way. 😄
 
 For your convenience, here is a list of all the exercises, with links to view the code on GitHub.
 
@@ -55,7 +55,7 @@ If you like the work I do, please consider sponsoring me [on GitHub] or [on Patr
 
 [exercises]: https://github.com/CleanCut/ultimate_rust2#exercises
 [`example/`]: https://github.com/CleanCut/ultimate_rust2/blob/main/example
-[open an discussion]: https://github.com/CleanCut/ultimate_rust2/discussions/new
+[open a discussion]: https://github.com/CleanCut/ultimate_rust2/discussions/new
 [Ultimate Rust Crash Course]: https://agileperception.com/ultimate_rust_crash_course
 [Rust in 3 Weeks]: https://agileperception.com
 [Ultimate Rust 2: Intermediate Concepts]: https://github.com/CleanCut/ultimate_rust2
